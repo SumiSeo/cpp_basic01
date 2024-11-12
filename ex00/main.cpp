@@ -2,10 +2,13 @@
 #include <cstring>
 #include <iostream>
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	std::cout << "HI";
-
-	(void)argc;
-	(void)argv;
+	Zombie zombie1("Zombie one");
+	zombie1.announce();
+	Zombie *zombie2 = newZombie("Zomebie two");
+	zombie2->announce();
+	randomChump("chump");
+	delete zombie2;
+	return (0);
 }

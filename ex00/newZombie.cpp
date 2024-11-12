@@ -1,9 +1,7 @@
 
 #include "Zombie.hpp"
 
-class newZombie
+Zombie	*newZombie(std::string name)
 {
-  public:
-  private:
-	std::string name;
-};
+	return (new Zombie(name));
+}

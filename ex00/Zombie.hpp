@@ -1,20 +1,21 @@
 #pragma once
-#ifndef __ZOMBIE__H
-# define __ZOMBIE__H
+#ifndef __ZOMBIE__HPP
+# define __ZOMBIE__HPP
 
 # include <cstring>
 # include <iostream>
 
 class Zombie
 {
-  public:
-	Zombie(std::string name);
-	~Zombie(void);
-
-	void announce(void);
-
   private:
 	std::string name;
-};
 
-#endif //* __ZOMBIE__H *//
+  public:
+	Zombie(std::string name);
+	void announce(void);
+	~Zombie(void);
+};
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
+
+#endif //* __ZOMBIE__HPP *//
