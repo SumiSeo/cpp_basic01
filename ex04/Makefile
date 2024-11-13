@@ -1,6 +1,6 @@
 NAME = filesystem
 
-SRC = main.cpp File.cpp 
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
