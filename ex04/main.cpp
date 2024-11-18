@@ -14,16 +14,15 @@ void	replaceAndWrite(std::stringstream &buffer, const std::string &src,
 	srcLength = src.length();
 	while (i < content.length())
 	{
-		// Check if the substring matches `src`
 		if (content.substr(i, srcLength) == src)
 		{
-			outfile << dest; // Write `dest` to `outfile`
-			i += srcLength;  // Skip over `src` in the input
+			outfile << dest;
+			i += srcLength;
 		}
 		else
 		{
-			outfile << content[i]; // Write the current character to `outfile`
-			i++;                   // Move to the next character
+			outfile << content[i];
+			i++;
 		}
 	}
 }
@@ -38,7 +37,7 @@ int	main(int argc, char **argv)
 	std::ifstream infile(argv[1]);
 	if (!infile)
 	{
-		std::cout << "The file does not exist" << std::endl;
+		std::cout << "The infile does not exist" << std::endl;
 		return (1);
 	}
 	std::string src;
@@ -47,6 +46,11 @@ int	main(int argc, char **argv)
 	dest = argv[3];
 	std::string new_file = (std::string(argv[1]) + ".replace").c_str();
 	std::ofstream outfile(new_file.c_str());
+	if (!outfile)
+	{
+		std::cout << "The outfile does not exist" << std::endl;
+		return (1);
+	}
 	std::stringstream buffer;
 	buffer << infile.rdbuf();
 	replaceAndWrite(buffer, src, dest, outfile);
