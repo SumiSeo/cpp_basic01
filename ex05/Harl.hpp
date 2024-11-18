@@ -14,10 +14,10 @@ class Harl
 	void complain(std::string level);
 
   private:
-	void debug();
-	void info();
-	void warning();
-	void error();
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 };
 
 #endif /*__HARL__HPP*/
