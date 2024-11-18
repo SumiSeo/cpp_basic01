@@ -4,6 +4,7 @@
 
 # include <cstring>
 # include <iostream>
+# include <sstream>
 
 class Zombie
 {
