@@ -6,9 +6,9 @@ int	main(void)
 {
 	Zombie zombie1("Zombie one");
 	zombie1.announce();
-	Zombie *zombie2 = newZombie("Zomebie two");
+	Zombie *zombie2 = newZombie("Zombie two");
 	zombie2->announce();
-	randomChump("chump");
+	randomChump("Zombie chump");
 	delete zombie2;
 	return (0);
 }
