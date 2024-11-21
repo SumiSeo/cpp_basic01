@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 	std::ifstream infile(argv[1]);
 	if (!infile)
 	{
-		std::cout << "The infile does not exist" << std::endl;
+		std::cout << "The infile does not exist or cannot be opened for reading" << std::endl;
 		return (1);
 	}
 	std::string src;
